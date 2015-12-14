@@ -16,14 +16,8 @@ App = React.createClass({
  
   render() {
     return (
-      <div className="container">
-        <header>
-          <h1>Messages</h1>
-        </header>
- 
-        <ul>
+      <div className="ui middle aligned selection list">
           {this.renderMessages()}
-        </ul>
       </div>
     );
   }

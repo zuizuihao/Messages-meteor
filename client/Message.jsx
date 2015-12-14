@@ -7,7 +7,11 @@ Message = React.createClass({
   },
   render() {
     return (
-      <li>{this.props.message.text}</li>
+      <div className="item">
+        <div className="content">
+          <div className="header"> {this.props.message.text} </div>
+        </div>
+      </div>
     );
   }
 });
