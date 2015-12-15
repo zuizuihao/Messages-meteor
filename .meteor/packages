@@ -20,3 +20,4 @@ twbs:bootstrap
 underscore
 iron:router@1.0.0-pre3
 sacha:spin
+ian:accounts-ui-bootstrap-3
