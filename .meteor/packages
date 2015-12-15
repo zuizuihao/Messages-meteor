@@ -12,10 +12,11 @@ mobile-experience
 standard-minifiers
 insecure
 less
-iron:router@0.9.4
 accounts-password
 jquery
 tracker
 check
 twbs:bootstrap
 underscore
+iron:router@1.0.0-pre3
+sacha:spin
