@@ -1,7 +1,12 @@
 <template name="messageItem">
-  <div class="message">
-    <div class="message-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+  <a role="button" href="{{url}}" class="list-group-item">
+    {{#if hasSeen}}
+    <span class="glyphicon glyphicon-asterisk"></span>
+    {{/if}}
+    <div>
+      <h4 class="list-group-item-heading">{{from}}</h4>
+      <h4 class="list-group-item-heading">{{title}}</h4>
+      <p class="list-group-item-text navbar-right">{{createTime}}</p>
     </div>
-  </div>
+  </a>
 </template>
