@@ -10,7 +10,6 @@ session
 mongo
 mobile-experience
 standard-minifiers
-insecure
 less
 accounts-password
 jquery
