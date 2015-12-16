@@ -1,5 +1,10 @@
 <template name="messagePage">
-  <form class="comment form">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+     <a class="navbar-brand" href="{{pathFor 'messagesList'}}">{{this.username}}</a>
+    </div>
+  </nav>
+  <form class="form-horizontal">
       <input type="text" name="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
 	    <input type="submit" value="Send" class="btn btn-primary"/>
   </form>

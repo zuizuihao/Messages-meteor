@@ -1,7 +1,8 @@
+Session.setDefault("pageTitle", "My Messages");
+
 Template.header.helpers({
   pageTitle: function() { 
-      var pageTitle = Session.get('pageTitle');
-      return pageTitle ? pageTitle : "My Messages";
+      return Session.get('pageTitle');
   },
   unreadMessageCount: function(){
     var count = 0;

@@ -1,5 +1,10 @@
 <template name="friendsList">
-  <ul>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{pathFor 'friendsList'}}">Friends</a>
+    </div>
+  </nav>
+  <ul class="list-group">
     {{#each friends}}
       {{> friendItem}}
     {{/each}}

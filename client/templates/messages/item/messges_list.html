@@ -1,9 +1,15 @@
 <template name="messagesList">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+     <a class="navbar-brand">My Messages <span>{{unreadMessageCount}}/{{totalMessageCount}}</span></a>
+    </div>
+  </nav>
+  
   {{#if currentUser}}
-  <div class="list-group">
-    {{#each messageList}}
-      {{> messageItem}}
-    {{/each}}
-  </div>
+    <div class="list-group">
+      {{#each messageList}}
+        {{> messageItem}}
+      {{/each}}
+    </div>
   {{/if}}
 </template>

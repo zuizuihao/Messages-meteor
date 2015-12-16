@@ -6,9 +6,11 @@
           <a href="#" class="js-user-menu btn-secondary">
             {{emailLocalPart}}
           </a>
-          {{#if userMenuOpen}}
-            <a class="js-logout btn-secondary">Logout</a>
-          {{/if}}
+          <a class="js-logout btn-secondary">Logout</a>
+        </div>
+        <div class="list-todos">
+          <a class="js-new-list link-list-new" href="{{pathFor 'messagesList'}}">My Messages</a>
+          <a class="js-new-list link-list-new" href="{{pathFor 'friendsList'}}">Friends</a>
         </div>
       {{else}}
         <div class="btns-group">
@@ -31,11 +33,8 @@
     {{/unless}}
 
     <div class="content-overlay"></div>
-
+    
     <div id="content-container">
-      {{#if currentUser}}
-        {{> header}}
-      {{/if}}
       {{#each thisArray}}
         {{> yield}}
       {{/each}}

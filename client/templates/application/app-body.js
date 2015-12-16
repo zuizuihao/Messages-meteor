@@ -1,9 +1,6 @@
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
-var USER_MENU_KEY = 'userMenuOpen';
-Session.setDefault(USER_MENU_KEY, false);
-
 var SHOW_CONNECTION_ISSUE_KEY = 'showConnectionIssue';
 Session.setDefault(SHOW_CONNECTION_ISSUE_KEY, false);
 
@@ -70,9 +67,6 @@ Template.appBody.helpers({
     var email = Meteor.user().emails[0].address;
     return email.substring(0, email.indexOf('@'));
   },
-  userMenuOpen: function() {
-    return Session.get(USER_MENU_KEY);
-  },
   connected: function() {
     if (Session.get(SHOW_CONNECTION_ISSUE_KEY)) {
       return Meteor.status().connected;
@@ -90,12 +84,6 @@ Template.appBody.events({
   'click .content-overlay': function(event) {
     Session.set(MENU_KEY, false);
     event.preventDefault();
-  },
-
-  'click .js-user-menu': function(event) {
-    Session.set(USER_MENU_KEY, ! Session.get(USER_MENU_KEY));
-    // stop the menu from closing
-    event.stopImmediatePropagation();
   },
 
   'click #menu a': function() {
