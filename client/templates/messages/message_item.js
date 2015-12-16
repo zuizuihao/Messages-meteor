@@ -5,7 +5,7 @@ Template.messageItem.helpers({
       return this.from;
     }
     
-    var user = Meteor.users.findOne({_id: this.fromId});
+    var user = Meteor.users.findOne({_id: this.fromId, fields: { 'username':1}});
     if(user)
       return user.username;
     return undefined;

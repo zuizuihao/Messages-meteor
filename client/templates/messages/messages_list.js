@@ -1,5 +1,5 @@
 Template.messagesList.helpers({
   messages: function() {
-    return Messages.find();
+    return Messages.find({}, {sort: {sentTime: -1}});
   }
 });
