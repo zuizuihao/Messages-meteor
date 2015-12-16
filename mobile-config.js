@@ -1,9 +1,9 @@
 App.info({
-  name: 'Todos',
-  description: 'A simple todo list app built in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
+  name: 'Messages',
+  description: 'A simple messages app built in Meteor.',
+  author: 'zuizuihao',
+  email: '1165622982@qq.com',
+  website: 'http://zuizuihao.com',
   version: '0.0.1'
 });
 

@@ -1,7 +1,7 @@
 Template.messagePageItem.helpers({
   userName: function() {
     if(this.from){
-      console.log(this.from);
+      //console.log(this.from);
       return this.from;
     }
     
