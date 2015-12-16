@@ -1,5 +1,6 @@
 # Messages-meteor
-Just a meteor’s practice.
+Just a meteor’s practice. see the result here.
+http://zuizuihao-messages.meteor.com
 
 I found many useful packages in https://atmospherejs.com.
 
