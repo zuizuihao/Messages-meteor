@@ -1,5 +1,8 @@
 Template.header.helpers({
-  pageTitle: function() { return Session.get('pageTitle'); },
+  pageTitle: function() { 
+      var pageTitle = Session.get('pageTitle');
+      return pageTitle ? pageTitle : "My Messages";
+  },
   unreadMessageCount: function(){
     var count = 0;
     if(Meteor.user()){

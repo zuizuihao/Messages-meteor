@@ -1,7 +1,6 @@
 <template name="friendItem">
-    <li class="list-group-item">
-        <p>{{this.username}}</p>
-        <p>{{this._id}}</p>
+    <li>
+        <p>{{user.username}}</p>
         {{#if isFriend}}
             <button class="remove">Remove</button>
         {{else}}
