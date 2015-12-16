@@ -1,9 +1,11 @@
 <template name="friendItem">
-    <p>{{this.username}}</p>
-    <p>{{this._id}}</p>
-    {{#if isFriend}}
-        <button class="remove">Remove</button>
-    {{else}}
-        <button class="add">Add</button>
-    {{/if}}
+    <li class="list-group-item">
+        <p>{{this.username}}</p>
+        <p>{{this._id}}</p>
+        {{#if isFriend}}
+            <button class="remove">Remove</button>
+        {{else}}
+            <button class="add">Add</button>
+        {{/if}}
+    </li>
 </template>

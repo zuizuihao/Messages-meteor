@@ -1,0 +1,3 @@
+Template.messagePageItem.helpers({
+  
+});

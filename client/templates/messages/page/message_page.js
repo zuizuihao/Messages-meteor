@@ -1,6 +1,6 @@
 Template.messagePage.helpers({
   messagePageItems: function() {
-    return Messages.find();
+    return Messages.find({}, {sort: {sentTime: -1}});
   }
 });
 
@@ -9,10 +9,11 @@ Template.messagePage.events({
     e.preventDefault();
 
     var message = {
-      title: $(e.target).find('[name=userComment]').val()
+      toUserName: this.username,
+      content: $(e.target).find('[name=userComment]').val()
     };
 
-    Meteor.call('messageInsert', message, function(error, result) {
+    Meteor.call('insertMessage', message, function(error, result) {
       // 显示错误信息并退出
       if (error)
         return alert(error.reason);

@@ -3,7 +3,7 @@
       <input type="text" name="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
 	    <input type="submit" value="Send" class="btn btn-primary"/>
   </form>
-  <ul class="list-unstyled ui-sortable">
+  <ul class="list-group">
    {{#each messagePageItems}}
       {{> messagePageItem}}
     {{/each}}
