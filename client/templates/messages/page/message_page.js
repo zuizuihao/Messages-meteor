@@ -1,7 +1,22 @@
 Template.messagePage.helpers({
   messagePageItems: function() {
-    return Messages.find({}, {sort: {sentTime: -1}});
+    var selectedUserName = this.username;
+    var currentUserName = Meteor.user().username;
+    
+    var query = {$or : [
+        { $and : [ { toUserName : selectedUserName }, { fromUserName : currentUserName} ] },
+        { $and : [ { toUserName : currentUserName }, { fromUserName : selectedUserName} ] }
+    ]};
+    return Messages.find(query, {sort: {sentTime: -1}});
   }
+});
+
+Template.messagePage.onRendered(function () {
+    Meteor.call('markAllMessageRead', this.data.username, function(error, result) {
+      // 显示错误信息并退出
+      if (error)
+        return alert(error.reason);
+    });
 });
 
 Template.messagePage.events({
@@ -22,7 +37,7 @@ Template.messagePage.events({
       if (result.messageWithSameContent)
         alert('This message has already been posted.'); 
        
-      Router.go('messagePage', {_id: result._id});
+      Router.go('messagePage', {username: result.username});
     });
   }
 });

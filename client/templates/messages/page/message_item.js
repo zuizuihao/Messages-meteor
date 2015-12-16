@@ -14,6 +14,6 @@ Template.messageItem.helpers({
     var fromUserName = user.username;
     var toUserName = Meteor.user().username;
     var query = {$and : [ { fromUserName : fromUserName }, { toUserName : toUserName}, {hasSeen: false} ]};
-    return Messages.findOne(query, { multi: true });
+    return Messages.findOne(query);
   }
 });

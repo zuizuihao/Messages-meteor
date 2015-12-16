@@ -1,7 +1,7 @@
 <template name="messageItem">
   <a role="button" href="{{pathFor 'messagePage' username = user.username }}" class="list-group-item">
-    {{#if lastMessage.hasSeen}}
-    <span class="glyphicon glyphicon-asterisk"></span>
+    {{#if markUnread}}
+      <span class="glyphicon glyphicon-asterisk"></span>
     {{/if}}
     <div>
       <h4 class="list-group-item-heading">{{user.username}}</h4>
