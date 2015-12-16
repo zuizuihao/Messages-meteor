@@ -16,6 +16,8 @@ Template.friendItem.events({
 
 Template.friendItem.helpers({
   isFriend: function() {
-    return Meteor.user().profile.friendList.indexOf(this._id) >= 0;
+    if(Meteor.user())
+        return Meteor.user().profile.friendList.indexOf(this._id) >= 0;
+    return false;
   }
 });

@@ -1,7 +1,11 @@
 <template name="header">
   <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{{pathFor 'messagesList'}}">{{pageTitle}}</a>
+      <a class="navbar-brand" href="{{pathFor 'messagesList'}}">{{pageTitle}}
+        {{#if isMessageListView}}
+          <span>{{unreadMessageCount}}/{{totalMessageCount}}</span>
+        {{/if}}
+      </a>
       <a class="navbar-brand" href="{{pathFor 'friendsList'}}">Friends</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
